@@ -32,7 +32,8 @@ with open("easy_words.txt") as file:
 	easy_words_gen = cut_hanzi(text)
 
 for word in words_gen:
-    words[word] = words.get(word, 0) + 1
+	if re.match((ur"([\u4E00-\u9FA5])"), word):
+		words[word] = words.get(word, 0) + 1
 
 for word in easy_words_gen:
 	if word in words:
