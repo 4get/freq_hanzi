@@ -46,8 +46,7 @@ print ("<table border=\"1\">")
 print ("  <tr>")
 print ("    <th>word</th>")
 print ("    <th>Weibo</th>")
-print ("    <th>eudic</th>")
-print ("    <th>52words</th>")
+print ("    <th>zdict</th>")
 print ("    <th>Pic.bing.cn</th>")
 print ("  </tr>")
 
@@ -58,6 +57,7 @@ for word, frequency in top_words:
 	print ("<font size=\"4\">")
 	print ("<td>%s</td>" % (word))
 	print ("<td><a href=\"http://s.weibo.com/weibo/%s&Refer=STopic_box\" target=\"_blank\">%s</a></td>" % (word, word))
+	print ("<td><a href=\"http://www.zdic.net/sousuo/?q=%s\" target=\"_blank\">%s</a></td>" % (word, word))
 	print ("<td><a href=\"http://cn.bing.com/images/search?q=%s&go=&qs=bs&form=QBIR\" target=\"_blank\">%s</a></td>" % (word, word))
 	print ("</tr>")
 
