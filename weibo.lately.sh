@@ -1,8 +1,9 @@
 
 mkdir -p weibo
 
-for file in $(ls -t *.wf | head)
+for file in $(ls -t txt_cn/*.txt | sed 's/^.*\///g' | head)
 do
-    ./weibo.hanzi.py $file > ./weibo/$file.htm
+    ./freq_hanzi.py txt_cn/$file > $file.wf
+    ./weibo.hanzi.py txt_cn/$file > ./weibo/$file.htm
 done
 
